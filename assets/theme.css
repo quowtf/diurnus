@@ -1,0 +1,257 @@
+@tailwind base;
+
+html {
+  font-size: 22px;
+}
+body {
+  padding: 0 0;
+}
+h1 {
+  margin-top: 0;
+}
+@screen md {
+  html {
+    font-size: 17px;
+  }
+}
+
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  @apply text-gray-900;
+  @apply font-serif;
+}
+
+body {
+  @apply text-gray-800;
+}
+
+article p {
+  margin: 1rem 0;
+  @apply break-words;
+}
+
+figure img {
+  @apply border-4 rounded border-white;
+  @apply shadow;
+}
+
+figure {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  text-align: center;
+}
+
+figure p {
+  margin: 0;
+  font-size: 0.8rem;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+article a.anchor {
+  float: left;
+  margin-left: -20px;
+  padding-right: 6px;
+  box-shadow: none;
+  opacity: 0.8;
+}
+article a.anchor:hover {
+  background: 0 0;
+  color: #4c867f;
+  opacity: 1;
+}
+article a.anchor svg {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: baseline;
+  visibility: hidden;
+}
+article a.anchor:focus svg {
+  visibility: visible;
+}
+article h1:hover a.anchor svg,
+article h2:hover a.anchor svg,
+article h3:hover a.anchor svg,
+article h4:hover a.anchor svg,
+article h5:hover a.anchor svg,
+article h6:hover a.anchor svg {
+  visibility: visible;
+}
+
+article pre {
+  @apply overflow-x-auto rounded my-3 bg-gray-300;
+}
+
+article blockquote {
+  @apply border-l-2 rounded border-gray-900 pl-2;
+}
+
+article p svg {
+  @apply mr-1;
+}
+
+blockquote cite sup {
+  @apply p-1;
+}
+blockquote cite sup a {
+  @apply not-italic font-mono;
+}
+
+blockquote cite sup a.footnote-ref::before {
+  content: "[";
+}
+
+blockquote cite sup a.footnote-ref::after {
+  content: "]";
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  width: 100%;
+  max-width: 100%;
+}
+table th,
+table td {
+  padding: 1.5%;
+  border: 1px solid;
+}
+
+table th {
+  font-weight: 700;
+  vertical-align: bottom;
+}
+
+article ol,
+article ul {
+  @apply ml-2 pl-2;
+}
+
+article ol {
+  @apply list-disc;
+}
+
+article ul {
+  @apply list-decimal;
+}
+
+hr.content-end {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+
+hr.content-end:after {
+  content: "•";
+  display: inline-block;
+  position: relative;
+  top: -1rem;
+  font-size: 0.5rem;
+  padding: 0 0.25em;
+  @apply bg-gray-100;
+}
+
+article .footnotes ul,
+article .footnotes ol {
+  @apply list-none;
+}
+
+article footer span {
+  @apply mx-1;
+}
+
+.sicon {
+  display: inline;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+article * {
+  @apply break-words;
+}
+
+article img {
+  opacity: 0.5;
+  transition: 1s ease;
+}
+
+article img:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+
+@screen md {
+  figure img {
+    @apply border-8 rounded border-white;
+    @apply shadow-lg;
+  }
+
+  figure.left {
+    float: left;
+    margin-right: 1.5em;
+    max-width: 50%;
+    margin-left: -5%;
+  }
+
+  figure.right {
+    float: right;
+    margin-left: 1.5em;
+    max-width: 50%;
+    margin-right: -5%;
+  }
+
+  article p {
+    margin: 2rem 0;
+  }
+
+  figure p {
+    margin: 0.5rem 0;
+  }
+
+  footer p {
+    margin: 0.5rem 0;
+  }
+}
+
+@screen lg {
+  figure.left {
+    float: left;
+    margin-right: 1.5em;
+    max-width: 50%;
+    margin-left: -25%;
+  }
+  figure.right {
+    float: right;
+    margin-left: 1.5em;
+    max-width: 50%;
+    margin-right: -25%;
+  }
+}

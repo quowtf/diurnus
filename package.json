@@ -1,0 +1,20 @@
+{
+  "license": "MIT",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development postcss assets/theme.css -o static/css/styles.css --watch --verbose",
+    "build": "cross-env NODE_ENV=production postcss assets/theme.css -o static/css/styles.css"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "concurrently": "^5.2.0",
+    "cross-env": "^7.0.2",
+    "cssnano": "^4.1.10",
+    "postcss-cli": "^7.1.1"
+  }
+}
