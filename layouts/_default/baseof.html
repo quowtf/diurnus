@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Poppins:300,400,500,600,700|Space+Mono:400,700&amp;display=swap" rel="stylesheet" />
     <link href="/css/styles.css" rel="stylesheet" />
+    {{- if .Params.images -}}
+      {{- range first 1 .Params.images -}}
+        <style>.bg-img {background-image: url('{{. | absURL}}');}</style>
+      {{- end -}}
+    {{- end -}}
   </head>
   <body class="bg-gray-100">
     <div class="flex flex-col min-h-screen m-auto">
@@ -20,5 +25,6 @@
         {{ end }}
       </div>
     </div>
+		<script src="/js/main.js" ></script>
   </body>
 </html>
