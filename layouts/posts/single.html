@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{- if (or .Params.images .Params.featuredImg) }}
+  <div class="bg-img"></div>
+{{- end }}
 <main class="m-auto w-full lg:max-w-2xl">
   <article class="m-auto mt-5 md:max-w-lg lg:max-w-xl">
     <header class="post-header">
@@ -7,6 +10,13 @@
         <span>{{ .Date.Format .Site.Params.dateform }}</span>
       </div>
     </header>
+    {{- if .Params.images -}}
+      {{- range first 1 .Params.images -}}
+        <figure>
+          <img src="{{ . | relURL }}" id="img-btn" />
+        </figure>
+		  {{- end -}}
+	  {{- end -}}
     <div class="mt-5">{{ .Content | safeHTML }}</div>
     <hr class="content-end" />
     <footer class="post-info">
