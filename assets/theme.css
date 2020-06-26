@@ -198,14 +198,35 @@ article * {
   @apply break-words;
 }
 
-article img {
+article img.opaqued {
   opacity: 0.5;
   transition: 1s ease;
 }
 
-article img:hover {
+article img.opaqued:hover {
   opacity: 1;
   transition: 1s ease;
+}
+
+.bg-img {
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.02;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s;
+}
+
+.show-bg-img {
+  z-index: 100;
+  opacity: 1;
+  cursor: pointer;
 }
 
 @screen md {
