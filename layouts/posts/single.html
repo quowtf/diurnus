@@ -10,6 +10,11 @@
         <span>{{ .Date.Format .Site.Params.dateform }}</span>
       </div>
     </header>
+    {{- if .Params.paragraphs -}}
+      {{- range first 1 .Params.paragraphs -}}
+        <p class="text-gray-600 italic">{{ . }}</p>
+      {{- end -}}
+    {{- end -}}
     {{- if .Params.images -}}
       {{- range first 1 .Params.images -}}
         <figure>
