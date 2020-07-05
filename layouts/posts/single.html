@@ -12,14 +12,18 @@
     </header>
     {{- if .Params.paragraphs -}}
       {{- range first 1 .Params.paragraphs -}}
-        <p class="text-gray-600 italic">{{ . }}</p>
+        {{- if gt (len .) 0 -}}
+          <p class="text-gray-600 italic">{{ . }}</p>
+        {{- end -}}
       {{- end -}}
     {{- end -}}
     {{- if .Params.images -}}
       {{- range first 1 .Params.images -}}
-        <figure>
-          <img src="{{ . | relURL }}" id="img-btn" />
-        </figure>
+        {{- if gt (len .) 0 -}}
+          <figure>
+            <img src="{{ . | relURL }}" id="img-btn" />
+          </figure>
+		    {{- end -}}
 		  {{- end -}}
 	  {{- end -}}
     <div class="mt-5">{{ .Content | safeHTML }}</div>
