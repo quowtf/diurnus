@@ -111,7 +111,45 @@ article pre {
 }
 
 article blockquote {
-  @apply border-l-2 rounded border-gray-900 pl-2;
+  @apply py-1
+}
+
+article blockquote p {
+  @apply my-2
+}
+
+article blockquote {
+  @apply border-l-8 border-gray-900 pl-4;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+article blockquote footer {
+  @apply text-gray-600 mb-2 relative
+}
+
+article blockquote footer:before {
+  content: '\2015';
+}
+
+article blockquote footer:after {
+  content: '\201D';
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  font-size: 6rem;
+  z-index: -1;
+}
+
+article .first-p{
+  @apply text-gray-600;
+}
+
+article .first-p:first-letter {
+  float: left;
+  margin: 5px 3px 1px 0;
+  font-size: 3.5em;
+  font-weight: bold;
 }
 
 article p svg {
