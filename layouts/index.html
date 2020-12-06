@@ -53,21 +53,13 @@
             </section>
           </div>
         {{ end }}
-        {{ if (ne (len .Site.Taxonomies.languages) 0) }}
-          <div class="mt-5 text-xs lg:text-md">
-            <section>
-              {{ range $index, $element := .Site.Taxonomies.languages }}
-                {{ if $index }}
-                  <span class="bg-gray-300 inline-block px-2 m-1 rounded ">
-                    <a href="{{ $element.Page.RelPermalink }}" class="no-underline whitespace-no-wrap border-transparent">
-                      <span> ({{ $element.Page.Title }}) </span>
-                    </a>
-                  </span>
-                {{ end }}
-              {{ end }}
-            </section>
-          </div>
-        {{ end }}
+	<div class="mt-5 text-xs lg:text-md">
+	  <section>
+	    {{- range .Site.Menus.main -}}
+	    <a class="mr-2 md:mr-5" href="{{ .URL | absLangURL }}">{{- .Name -}}</a>
+	    {{- end }}
+	  </section>
+	</div>
       </div>
       {{ block "footer" . }}
         {{ partial "footer.html" . }}
