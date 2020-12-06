@@ -13,7 +13,7 @@
     {{- if .Params.paragraphs -}}
       {{- range first 1 .Params.paragraphs -}}
         {{- if gt (len .) 0 -}}
-          <p class="first-p">{{ . }}</p>
+          <p class="hook-paragraph">{{ . }}</p>
         {{- end -}}
       {{- end -}}
     {{- end -}}

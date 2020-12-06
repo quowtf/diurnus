@@ -43,12 +43,12 @@ h4,
 h5,
 h6,
 strong {
-  @apply text-gray-900;
+  @apply text-gray-700;
   @apply font-serif;
 }
 
 body {
-  @apply text-gray-800;
+  @apply text-gray-700;
 }
 
 article p {
@@ -141,15 +141,16 @@ article blockquote footer:after {
   z-index: -1;
 }
 
-article .first-p{
+article .hook-paragraph{
   @apply text-gray-600;
 }
 
-article .first-p:first-letter {
+article .hook-paragraph:first-letter {
   float: left;
   margin: 5px 3px 1px 0;
   font-size: 3.5em;
   font-weight: bold;
+  @apply text-gray-700;
 }
 
 article p svg {
