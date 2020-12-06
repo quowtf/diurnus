@@ -4,8 +4,8 @@
       <a href="/" class="font-serif">{{ .Site.Title }}</a>
     </div>
     <div class="justify-between font-serif">
-      {{- range .Site.Menus.main }}
-      <a class="mr-2 md:mr-5" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+      {{- range .Site.Menus.main -}}
+      <a class="mr-2 md:mr-5" href="{{ .URL | absLangURL }}">{{- .Name -}}</a>
       {{- end }}
     </div>
   </div>
