@@ -13,7 +13,7 @@
     {{- if .Params.paragraphs -}}
       {{- range first 1 .Params.paragraphs -}}
         {{- if gt (len .) 0 -}}
-          <p class="hook-paragraph">{{ . }}</p>
+          <p class="hook-paragraph nice-paragraph">{{ . }}</p>
         {{- end -}}
       {{- end -}}
     {{- end -}}
@@ -26,7 +26,7 @@
 		    {{- end -}}
 		  {{- end -}}
 	  {{- end -}}
-    <div class="mt-5">{{ .Content | safeHTML }}</div>
+    <div class="mt-5 nice-paragraph">{{ .Content | safeHTML }}</div>
     <hr class="content-end" />
     <footer class="post-info">
       {{- with $.Param "author" }}

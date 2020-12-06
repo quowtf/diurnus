@@ -141,11 +141,12 @@ article blockquote footer:after {
   z-index: -1;
 }
 
-article .hook-paragraph{
+article .hook-paragraph {
   @apply text-gray-600;
 }
 
-article .hook-paragraph:first-letter {
+article .nice-paragraph:first-letter,
+article .nice-paragraph > p:first-of-type:first-letter {
   float: left;
   margin: 5px 3px 1px 0;
   font-size: 3.5em;
