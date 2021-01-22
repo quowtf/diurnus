@@ -146,12 +146,17 @@ article .hook-paragraph {
 }
 
 article .nice-paragraph:first-letter,
-article .nice-paragraph > p:first-of-type:first-letter {
-  float: left;
-  margin: 5px 3px 1px 0;
+article #content > p:first-of-type:first-letter {
+  margin: 0;
   font-size: 3.5em;
   font-weight: bold;
   @apply text-gray-700;
+  line-height: 0;
+}
+
+article .nice-paragraph,
+article #content > p:first-of-type {
+  margin-top: 2rem;
 }
 
 article p svg {
