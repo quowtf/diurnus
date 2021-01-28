@@ -1,14 +1,13 @@
-name = "diurnus"
+name = "Diurnus"
 license = "MIT"
 licenselink = "https://github.com/quowtf/diurnus/blob/master/LICENSE"
-description = "My private theme for hugo."
-homepage = "https://github.com/quowtf"
-tags = ["blog", "minimal", "dark", "responsive"]
+description = "A simple, minimal, readable, Hugo theme, or almost."
+homepage = "https://github.com/quowtf/diurnus"
+tags = ["blog", "minimal", "responsive"]
 features = [
-  "single column",
   "social icons",
 ]
-min_version = 0.43
+min_version = "0.41.0"
 
 [author]
   name = "quowtf"
