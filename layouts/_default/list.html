@@ -12,8 +12,7 @@
         {{- range .Pages }}
         <li class="border-gray-500 border-b border-dashed m-2">
           <a href="{{.Permalink}}" class="flex justify-between no-underline border-transparent">
-            <span class="post-title">{{ .Title }}</span
-            ><span class="text-gray-500">{{ .Date.Format .Site.Params.dateformShort }}</span>
+            <span class="post-title">{{ .Title }}</span>{{- if .Site.Params.dateformShort -}}<span class="text-gray-500">{{ .Date.Format .Site.Params.dateformShort }}</span>{{- else -}}<span class="text-gray-500">{{ .Date }}</span>{{- end -}}
           </a>
         </li>
         {{- end }}

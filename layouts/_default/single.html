@@ -4,7 +4,11 @@
     <header class="post-header">
       <h1 class="">{{ .Title }}</h1>
       <div class="text-xs">
-        <span>{{ .Date.Format .Site.Params.dateform }}</span>
+        {{- if .Site.Params.dateform }}
+          <span>{{ .Date.Format .Site.Params.dateform }}</span>
+        {{- else }}
+          <span>{{ .Date }}</span>
+        {{- end }}
       </div>
     </header>
     <div class="mt-5">{{ .Content | safeHTML }}</div>
