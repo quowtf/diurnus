@@ -11,6 +11,9 @@
         <style>.bg-img {background-image: url('{{. | absURL}}');}</style>
       {{- end -}}
     {{- end -}}
+    {{- if (and .Site.Params.plausibleDomain .Site.Params.plausibleSrc) -}}
+      <script async defer data-domain="{{- .Site.Params.plausibleDomain -}}" src="{{- .Site.Params.plausibleSrc -}}"></script>
+    {{- end -}}
   </head>
   <body class="bg-gray-100">
     <div class="flex flex-col min-h-screen m-auto">
