@@ -119,9 +119,12 @@ article blockquote p {
 }
 
 article blockquote {
-  @apply border-l-8 border-gray-900 pl-4;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+  @apply border-l-8 border-gray-900 px-4;
+  @apply border-r-8 border-gray-900 px-4;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 1rem;
+  @apply my-6;
 }
 
 article blockquote footer {
@@ -225,11 +228,6 @@ hr.content-end:after {
   font-size: 0.5rem;
   padding: 0 0.25em;
   @apply bg-gray-100;
-}
-
-article .footnotes ul,
-article .footnotes ol {
-  @apply list-none;
 }
 
 article footer span {
