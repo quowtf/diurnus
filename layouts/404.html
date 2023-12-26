@@ -8,6 +8,7 @@
       rel="stylesheet"
     />
     <link href="/css/styles.css" rel="stylesheet" />
+    <link disabled id="dark-mode-theme" rel="stylesheet" href="/css/dark.css">
     <title>{{.Title}}</title>
     {{- if (and .Site.Params.plausibleDomain .Site.Params.plausibleSrc) -}}
       <script async defer data-domain="{{- .Site.Params.plausibleDomain -}}" src="{{- .Site.Params.plausibleSrc -}}"></script>
@@ -74,5 +75,6 @@
       </div>
       {{ block "footer" . }} {{ partial "footer.html" . }} {{ end }}
     </div>
+    <script src="/js/main.js" ></script>
   </body>
 </html>

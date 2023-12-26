@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Poppins:300,400,500,600,700|Space+Mono:400,700&amp;display=swap" rel="stylesheet" />
+    <link disabled id="dark-mode-theme" rel="stylesheet" href="/css/dark.css">
     <link href="/css/styles.css" rel="stylesheet" />
     <title>{{.Title}}</title>
     {{- if .Params.images -}}
       {{- range first 1 .Params.images -}}
-        <style>.bg-img {background-image: url('{{. | absURL}}');}</style>
+      <style>.bg-img {background-image: url('{{. | absURL}}');}</style>
       {{- end -}}
     {{- end -}}
     {{- if (and .Site.Params.plausibleDomain .Site.Params.plausibleSrc) -}}
