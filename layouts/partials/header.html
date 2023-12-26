@@ -1,12 +1,17 @@
 <header class="min-w-full rounded-b shadow-xl bg-gray-100">
-  <div class="flex justify-between px-5 md:px-7 md:text-3xl py-2">
+  <div class="flex justify-between px-3 md:px-7 md:text-3xl py-2">
     <div class="">
       <a href="/" class="font-serif">{{ .Site.Title }}</a>
     </div>
-    <div class="justify-between font-serif">
+    <div class="flex justify-around font-serif ml-2">
       {{- range .Site.Menus.main -}}
-      <a class="mr-2 md:mr-5" href="{{ .URL | absLangURL }}">{{- .Name -}}</a>
+        <a class="mr-2 md:mr-5" href="{{ .URL | absLangURL }}">{{- .Name -}}</a>
       {{- end }}
+      <div class="flex justify-center items-center md:pb-1">
+        <a id="dark-mode-toggle">
+          <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z"/><path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </header>
