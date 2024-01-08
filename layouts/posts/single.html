@@ -10,21 +10,18 @@
         <span>{{ .Date.Format .Site.Params.dateform }}</span>
       </div>
     </header>
-    {{- if .Params.paragraphs -}}
-      {{- range first 1 .Params.paragraphs -}}
-        {{- if gt (len .) 0 -}}
-          <p class="hook-paragraph nice-paragraph">{{ . }}</p>
-        {{- end -}}
-      {{- end -}}
+    {{- with $.Params.paragraphs -}}
+      <p class="hook-paragraph nice-paragraph">{{ . }}</p>
     {{- end -}}
-    {{- if .Params.images -}}
-      {{- range first 1 .Params.images -}}
-        {{- if gt (len .) 0 -}}
-          <figure>
-            <img src="{{ . | relURL }}" id="img-btn" />
-          </figure>
-		    {{- end -}}
-		  {{- end -}}
+    {{- with $.Params.images -}}
+      <figure>
+        <img src="{{- . | relURL -}}" id="img-btn" />
+        {{- with $.Params.caption -}}
+        <figcaption>
+          <p>{{ . }}</p>
+        </figcaption>
+        {{- end -}}
+      </figure>
 	  {{- end -}}
     <div class="mt-5" id="content">{{ .Content | safeHTML }}</div>
     <hr class="content-end" />

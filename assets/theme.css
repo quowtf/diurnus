@@ -281,6 +281,11 @@ article img.opaqued:hover {
     @apply shadow-lg;
   }
 
+  figure.mid {
+    max-width: 50%;
+    margin: auto;
+  }
+
   figure.left {
     float: left;
     margin-right: 1.5em;

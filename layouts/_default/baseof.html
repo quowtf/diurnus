@@ -7,10 +7,8 @@
     <link disabled id="dark-mode-theme" rel="stylesheet" href="/css/dark.css">
     <link href="/css/styles.css" rel="stylesheet" />
     <title>{{.Title}}</title>
-    {{- if .Params.images -}}
-      {{- range first 1 .Params.images -}}
+    {{- with $.Params.images -}}
       <style>.bg-img {background-image: url('{{. | absURL}}');}</style>
-      {{- end -}}
     {{- end -}}
     {{- if (and .Site.Params.plausibleDomain .Site.Params.plausibleSrc) -}}
       <script async defer data-domain="{{- .Site.Params.plausibleDomain -}}" src="{{- .Site.Params.plausibleSrc -}}"></script>
