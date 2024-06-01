@@ -5,10 +5,15 @@
 <main class="m-auto w-full lg:max-w-2xl">
   <article class="m-auto mt-5 md:max-w-lg lg:max-w-xl">
     <header class="post-header">
-      <h1 class="">{{ .Title }}</h1>
-      <div class="text-sm">
-        <span>{{ .Date.Format .Site.Params.dateform }}</span>
+      <div class="flex justify-evenly text-xs">
+      {{- with .Params.categories }}
+        {{- range . -}}
+          <span class="category">{{ . }}</span>
+        {{- end -}}
+      {{- end -}}
+       <span>{{ .Date.Format .Site.Params.dateform }}</span>
       </div>
+      <h1 class="text-center">{{ .Title }}</h1>
     </header>
     {{- with $.Params.paragraphs -}}
       <p class="hook-paragraph nice-paragraph">{{ . }}</p>
@@ -54,14 +59,12 @@
       {{- end }}
     </footer>
   </article>
-  <div class="flex flex-col items-stretch text-center md:flex-row md:justify-between">
+  <div class="flex flex-col items-stretch text-center my-2 md:flex-row md:justify-evenly">
     {{- with .NextInSection }}
-      <a href="{{ .Permalink }}">
-        <span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sicon"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;</span><span>{{ .Title }}</span>
-      </a>
+      <p><a href="{{ .Permalink }}"><span class="post-nav-label"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sicon"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>&nbsp;</span><span>{{ .Title }}</span></a></p>
     {{- end }}
     {{- with .PrevInSection }}
-      <a href="{{ .Permalink }}"><span>{{ .Title }}</span><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sicon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a>
+      <p><a href="{{ .Permalink }}"><span>{{ .Title }}</span><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sicon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span></a></p>
     {{- end }}
   </div>
 </main>
