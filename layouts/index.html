@@ -31,7 +31,7 @@
             {{ range $name, $taxonomy := ($.Site.Taxonomies.tags) }}
               {{ $.Scratch.Add "tags" $name }}
             {{ end }}
-            {{ $bgcolors := slice "bg-red-200" "bg-red-300" "bg-red-400" "bg-red-500" "bg-yellow-200" "bg-yellow-200" "bg-yellow-200" "bg-yellow-200" "bg-green-200" "bg-green-300" "bg-green-400" "bg-green-500" "bg-blue-200" "bg-blue-300" "bg-blue-400" "bg-blue-500" "bg-indigo-200" "bg-indigo-300" "bg-indigo-400" "bg-indigo-500" "bg-purple-200" "bg-purple-300" "bg-purple-400" "bg-purple-500" "bg-pink-200" "bg-pink-300" "bg-pink-400" "bg-pink-500" }}
+            {{ $bgcolors := slice "bg-red-200" "bg-red-300" "bg-red-400" "bg-yellow-200" "bg-yellow-300" "bg-green-200" "bg-green-300" "bg-green-400" "bg-blue-200" "bg-blue-300" "bg-blue-400" "bg-indigo-200" "bg-indigo-300" "bg-indigo-400" "bg-purple-200" "bg-purple-300" "bg-purple-400" "bg-pink-200" "bg-pink-300" "bg-pink-400" }}
             {{ range $name := $.Scratch.Get "tags" | shuffle | first 15 }}
               {{- $taxonomy := index $.Site.Taxonomies.tags $name -}}
               <span class="{{ index (shuffle $bgcolors) 1 }} inline-block px-2 m-1 rounded">
