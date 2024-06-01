@@ -1,5 +1,6 @@
 name = "Diurnus"
 license = "MIT"
+version = 1.0.0
 licenselink = "https://github.com/quowtf/diurnus/blob/master/LICENSE"
 description = "A simple, minimal, readable, Hugo theme, or almost."
 homepage = "https://github.com/quowtf/diurnus"
