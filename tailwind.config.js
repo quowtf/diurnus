@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Montserrat"],
+        serif: ["Fondamento"],
         sans: ["Poppins"],
         mono: ["Space Mono"],
       },
